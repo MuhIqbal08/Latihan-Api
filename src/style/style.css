@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap');
+
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: #000 !important;
+    font-family: "Poppins" !important;
+}
+
+header.navbar-container {
+    /* max-width: 1200px; */
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    /* left: 10%; */
+    background-color: #000;
+    padding-block: 1rem;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+
+header.navbar-container a.navbar-brand,
+header.navbar-container a.navbar-brand:hover,
+header.navbar-container a.navbar-brand:focus {
+    display: inline-block;
+    /* color: #f70214ff; */
+    color: crimson;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+    text-align: center;
+    padding-top: 15px;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: crimson;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    /* background-color: #f70214ff; */
+    background-color: crimson;
+    color: #000;
+}
+
+main .container {
+    /* flex: 1; */
+    margin-top: 125px;
+    margin-bottom: 100px;
+    /* display: flex;
+    align-items: center; */
+    /* background-color: var(--primary-color); */
+}
+
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* Jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
+    min-height: 1em;
+    padding-inline:inherit;
+    overflow: hidden;
+}
+
+/* Menambahkan gaya agar elipsis tidak muncul saat title tidak terpotong */
+.card-title:hover {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: initial;
+}
+
+/* Menyamakan jarak pada semua elemen .card-text */
+.card-text {
+    margin-bottom: 0.5rem;
+    /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.card-img-top {
+    height: 350px;
+}
+
+
+.detail .card-title{
+    text-transform: capitalize;
+}
