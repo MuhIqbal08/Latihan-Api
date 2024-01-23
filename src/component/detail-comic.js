@@ -19,7 +19,7 @@ class DetailComic extends HTMLElement {
         const comicData = await DataSource.comicDetail();
         
         const renderComicDetail = (comic) => {
-            const listComicDetailElement = document.querySelector('main');
+            const listComicDetailElement = document.querySelector('.detail-card');
             listComicDetailElement.innerHTML = '';
 
             const alternativeTitles = comic.titles.map(title => title.title).join(', ');

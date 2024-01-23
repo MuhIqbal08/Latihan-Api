@@ -8,7 +8,7 @@ class ComicCard extends HTMLElement {
     const manhwaData = await DataSource.topComic()
 
     const renderAllComics = (comics) => {
-      const listComicElement = document.querySelector('.row');
+      const listComicElement = document.querySelector('.comic-card');
       listComicElement.innerHTML = '';
       
     //   const validComics = comics.filter((comic) => comic.chapters !== null );
