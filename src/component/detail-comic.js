@@ -1,6 +1,6 @@
-import manhwa from "../baseApi/data-source";
+import { comicDetail } from "../baseApi/data-source";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
-import DataSource from "../baseApi/data-source";
+// import DataSource from "../baseApi/data-source";
 // import DataSource from "../baseApi/data-source"
 
 class DetailComic extends HTMLElement {
@@ -16,7 +16,7 @@ class DetailComic extends HTMLElement {
 
     async connectedCallback() {
         // const comicId = 2
-        const comicData = await DataSource.comicDetail();
+        const comicData = await comicDetail();
         
         const renderComicDetail = (comic) => {
             const listComicDetailElement = document.querySelector('.detail-card');

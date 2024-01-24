@@ -1,14 +1,15 @@
-import manhwa from "../baseApi/data-source";
+import { topComic } from "../baseApi/data-source";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
-import DataSource from "../baseApi/data-source";
+// import DataSource from "../baseApi/data-source";
 
 class ComicCard extends HTMLElement {
 
   async connectedCallback(){
-    const manhwaData = await DataSource.topComic()
+      
+    const manhwaData = await topComic();
 
     const renderAllComics = (comics) => {
-      const listComicElement = document.querySelector('.comic-card');
+        const listComicElement = document.querySelector('.comic-card');
       listComicElement.innerHTML = '';
       
     //   const validComics = comics.filter((comic) => comic.chapters !== null );
