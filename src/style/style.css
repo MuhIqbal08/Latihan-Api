@@ -88,10 +88,12 @@ main .container {
 }
 
 /* Menambahkan gaya agar elipsis tidak muncul saat title tidak terpotong */
-.card-title:hover {
+.title-comic:hover {
     overflow: hidden;
     white-space: normal;
     text-overflow: initial;
+    color: crimson;
+    text-decoration: underline crimson;
 }
 
 /* Menyamakan jarak pada semua elemen .card-text */
@@ -107,4 +109,100 @@ main .container {
 
 .detail .card-title{
     text-transform: capitalize;
+}
+
+.container-detail {
+    margin-top: 125px;
+        margin-bottom: 100px;
+}
+.detail-row {
+    padding-left: 22px !important;
+}
+
+.synopsis {
+    text-align: justify;
+    /* padding-right: 50px; */
+}
+
+.detail-col {
+    padding-left: 50px !important;
+    border-radius: 10px;
+    color: crimson;
+    display: flex !important;
+}
+
+.button-close {
+    padding-left: 350px !important;
+}
+
+.detail-border {
+    padding-left: 0px !important;
+}
+
+/* Tata letak untuk layar ponsel */
+@media (max-width: 576px) {
+    .detail-row {
+        padding-left: 0px !important;
+    }
+    .detail-col {
+        padding-left: 0px !important;
+        border-radius: 10px;
+        color: crimson;
+        text-align: left !important;
+        /* Ubah menjadi text-align: left */
+    }
+
+    .detail-title {
+        padding-left: 50px !important;
+    }
+
+    .button-close {
+        padding-left: 150px !important;
+    }
+
+    .synopsis-title {
+        padding-left: 20px !important;
+    }
+
+    .synopsis {
+        padding-left: 30px !important;
+    }
+}
+
+/* Tata letak untuk layar tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+    .detail-row {
+            padding-left: 0px !important;
+        }
+    
+        .detail-col {
+            padding-left: 0px !important;
+            border-radius: 10px;
+            color: crimson;
+            text-align: left !important;
+            /* Ubah menjadi text-align: left */
+        }
+    
+        .detail-title {
+            padding-left: 50px !important;
+        }
+    
+        .button-close {
+            padding-left: 150px !important;
+        }
+    
+        .synopsis-title {
+            padding-left: 20px !important;
+        }
+    
+        .synopsis {
+            padding-left: 30px !important;
+        }
+    /* Mengatur lebar konten menjadi 80% pada layar tablet */
+}
+
+/* Tata letak untuk layar laptop */
+@media (min-width: 993px) {
+    /* Mengatur lebar konten menjadi 60% dan menampilkan sidebar pada layar laptop */
+
 }
