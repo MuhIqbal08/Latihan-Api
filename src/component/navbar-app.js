@@ -1,5 +1,5 @@
 import { searchComic } from '../baseApi/data-source';
-import { showElement, hideElement } from '../view/script';
+import { showElement } from '../view/script';
 
 class NavBar extends HTMLElement {
   connectedCallback() {
@@ -40,19 +40,14 @@ class NavBar extends HTMLElement {
 
       if (searchValue === '') {
         alert('Please enter a search term.');
-        hideElement('.container-detail');
         showElement('.comic-card');
-        // const topData = await topComic(searchValue);
-        // if (comicsCard) {
-        //   comicsCard.innerHTML = '';
-        //   comicsCard.renderAllComics(topData);
-        // }
       } else {
         const searchData = await searchComic(searchValue);
         if (comicsCard) {
           comicsCard.innerHTML = '';
           comicsCard.renderAllComics(searchData);
         }
+        showElement('.comic-card');
       }
     });
   }
